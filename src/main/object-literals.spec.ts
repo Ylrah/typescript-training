@@ -1,17 +1,17 @@
 describe('enhanced object literals', () => {
 
-  it('can use shorthand for property names', () => {
+  fit('can use shorthand for property names', () => {
 
     function createBeatle(name, dead) {
       // Using NEW Object Literal Syntax, return a literal that will allow the tests to pass
       return {
         type: 'Musician',
         // - in ES5 you'd do:
-        // name: name,
-        // dead: dead,
-        // wantsToPlayWith: function (target){
-        //   return `${this.name} wants to play with ${target.name} ${target.dead ? 'but he is' : 'and he is not'} dead`;
-        // }
+        name: name,
+        dead: dead,
+        wantsToPlayWith: function (target) {
+          return `${this.name} wants to play with ${target.name} ${target.dead ? 'but he is' : 'and he is not'} dead`;
+        }
         // - do that in ES6 !
       }
     }
