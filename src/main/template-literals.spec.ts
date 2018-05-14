@@ -55,7 +55,7 @@ describe('Template literals', () => {
 
     function tagIt(literalString, ...interpolatedParts) {
       // implement this function to make the test pass
-      return ``
+      return `${literalString[0]}dear ${interpolatedParts[0] + literalString[1]}really ${interpolatedParts[1] + literalString[2]}`;
     }
   })
 
@@ -63,7 +63,8 @@ describe('Template literals', () => {
     // Using tagged template strings, write journey function
     // that will accept following 3 template strings
     // and return a string describing the journey
-    let journey;
+    let journey = one => two => three => `${one}, then ${two} and finally ${three}!`;
+
 
     expect(journey`Warsaw` `Poznan` `Berlin`).toBe('Warsaw, then Poznan and finally Berlin!')
     expect(journey`Poland` `Czech` `Austria`).toBe('Poland, then Czech and finally Austria!')
